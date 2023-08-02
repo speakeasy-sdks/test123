@@ -1,4 +1,9 @@
 configVersion: 1.0.0
+management:
+  docChecksum: eb64a6a76bfb3db4a55f8a3a2cb59da3
+  docVersion: 1.0.0
+  speakeasyVersion: 1.66.4
+  generationVersion: 2.75.2
 generation:
   comments:
     disableComments: false
@@ -8,7 +13,7 @@ generation:
   singleTagPerOp: false
   tagNamespacingDisabled: false
 typescript:
-  version: 0.0.1
+  version: 1.0.0
   author: foo
   maxMethodParams: 0
   packageName: firstOne
