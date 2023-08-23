@@ -22,5 +22,6 @@ features:
 typescript:
   version: 1.4.0
   author: foo
+  clientServerStatusCodesAsErrors: true
   maxMethodParams: 0
   packageName: firstOne
