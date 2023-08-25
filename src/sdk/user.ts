@@ -93,8 +93,16 @@ export class User {
                     );
                 }
                 break;
-            case [403, 404].includes(httpRes?.status):
-                break;
+            case httpRes?.status == 403 ||
+                httpRes?.status == 404 ||
+                (httpRes?.status >= 400 && httpRes?.status < 500) ||
+                (httpRes?.status >= 500 && httpRes?.status < 600):
+                throw new errors.SDKError(
+                    "API error occurred",
+                    httpRes.status,
+                    decodedRes,
+                    httpRes
+                );
         }
 
         return res;
@@ -171,8 +179,18 @@ export class User {
             rawResponse: httpRes,
         });
         switch (true) {
-            case [200, 400, 404].includes(httpRes?.status):
+            case httpRes?.status == 200:
                 break;
+            case httpRes?.status == 400 ||
+                httpRes?.status == 404 ||
+                (httpRes?.status >= 400 && httpRes?.status < 500) ||
+                (httpRes?.status >= 500 && httpRes?.status < 600):
+                throw new errors.SDKError(
+                    "API error occurred",
+                    httpRes.status,
+                    httpRes?.data,
+                    httpRes
+                );
         }
 
         return res;
@@ -249,8 +267,18 @@ export class User {
             rawResponse: httpRes,
         });
         switch (true) {
-            case [200, 400, 404].includes(httpRes?.status):
+            case httpRes?.status == 200:
                 break;
+            case httpRes?.status == 400 ||
+                httpRes?.status == 404 ||
+                (httpRes?.status >= 400 && httpRes?.status < 500) ||
+                (httpRes?.status >= 500 && httpRes?.status < 600):
+                throw new errors.SDKError(
+                    "API error occurred",
+                    httpRes.status,
+                    httpRes?.data,
+                    httpRes
+                );
         }
 
         return res;
