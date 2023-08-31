@@ -46,3 +46,4 @@ docs/models/operations/updateuserrawrequest.md
 docs/models/operations/updateuserrawresponse.md
 docs/models/shared/schemebasicauth.md
 docs/models/shared/user.md
+.gitattributes
