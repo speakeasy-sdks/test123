@@ -34,13 +34,12 @@ export type SDKProps = {
 
 export class SDKConfiguration {
     defaultClient: AxiosInstance;
-    securityClient: AxiosInstance;
     serverURL: string;
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.7.1";
-    genVersion = "2.93.0";
+    sdkVersion = "1.8.0";
+    genVersion = "2.96.3";
 
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -89,11 +88,8 @@ export class FirstOne {
         }
 
         const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
-        const securityClient = defaultClient;
-
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
-            securityClient: securityClient,
             serverURL: serverURL,
         });
 
