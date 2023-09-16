@@ -41,11 +41,11 @@ sdk.echo.echo("Hello world!", operationSecurity).then((res: EchoResponse) => {
 ## Available Resources and Operations
 
 
-### [echo](docs/sdks/echo/README.md)
+### [Echo](docs/sdks/echo/README.md)
 
 * [echo](docs/sdks/echo/README.md#echo) - Echo test
 
-### [user](docs/sdks/user/README.md)
+### [User](docs/sdks/user/README.md)
 
 * [getUserByName](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 * [updateUserJson](docs/sdks/user/README.md#updateuserjson) - Updated user

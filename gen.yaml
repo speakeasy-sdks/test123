@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: eb64a6a76bfb3db4a55f8a3a2cb59da3
   docVersion: 1.0.0
-  speakeasyVersion: 1.82.3
-  generationVersion: 2.107.3
+  speakeasyVersion: 1.86.0
+  generationVersion: 2.115.2
 generation:
   comments:
     disableComments: false
@@ -15,12 +15,12 @@ generation:
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 2.87.1
+    core: 2.87.2
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
     methodSecurity: 2.81.1
 typescript:
-  version: 1.8.1
+  version: 1.8.2
   author: foo
   clientServerStatusCodesAsErrors: true
   maxMethodParams: 0
