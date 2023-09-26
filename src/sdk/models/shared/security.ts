@@ -11,3 +11,8 @@ export class SchemeBasicAuth extends SpeakeasyBase {
     @SpeakeasyMetadata({ data: "security, name=username" })
     username: string;
 }
+
+export class Security extends SpeakeasyBase {
+    @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2;name=Authorization" })
+    mainAuth: string;
+}
