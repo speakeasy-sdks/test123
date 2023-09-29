@@ -1,4 +1,5 @@
 # User
+(*user*)
 
 ## Overview
 
@@ -29,7 +30,7 @@ const operationSecurity: GetUserByNameSecurity = {
 
 sdk.user.getUserByName({
   prettyPrint: false,
-  username: "Katharina_Medhurst60",
+  username: "Zachery_Schneider",
   withEmail: false,
 }, operationSecurity).then((res: GetUserByNameResponse) => {
   if (res.statusCode == 200) {
@@ -60,12 +61,13 @@ This can only be done by the logged in user.
 
 ```typescript
 import { FirstOne } from "firstOne";
-import { UpdateUserJsonResponse, UpdateUserJsonSecurity } from "firstOne/dist/sdk/models/operations";
+import { UpdateUserJsonResponse } from "firstOne/dist/sdk/models/operations";
 
-const sdk = new FirstOne();
-const operationSecurity: UpdateUserJsonSecurity = {
-  mainAuth: "",
-};
+const sdk = new FirstOne({
+  security: {
+    mainAuth: "",
+  },
+});
 
 sdk.user.updateUserJson({
   user: {
@@ -75,8 +77,8 @@ sdk.user.updateUserJson({
     username: "John78",
   },
   prettyPrint: false,
-  username: "Ryan.Little62",
-}, operationSecurity).then((res: UpdateUserJsonResponse) => {
+  username: "Alanna_Waters81",
+}).then((res: UpdateUserJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -85,11 +87,10 @@ sdk.user.updateUserJson({
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.UpdateUserJsonRequest](../../models/operations/updateuserjsonrequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `security`                                                                             | [operations.UpdateUserJsonSecurity](../../models/operations/updateuserjsonsecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.UpdateUserJsonRequest](../../models/operations/updateuserjsonrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
@@ -105,18 +106,19 @@ This can only be done by the logged in user.
 
 ```typescript
 import { FirstOne } from "firstOne";
-import { UpdateUserRawResponse, UpdateUserRawSecurity } from "firstOne/dist/sdk/models/operations";
+import { UpdateUserRawResponse } from "firstOne/dist/sdk/models/operations";
 
-const sdk = new FirstOne();
-const operationSecurity: UpdateUserRawSecurity = {
-  mainAuth: "",
-};
+const sdk = new FirstOne({
+  security: {
+    mainAuth: "",
+  },
+});
 
 sdk.user.updateUserRaw({
-  requestBody: "deserunt".encode(),
+  requestBody: "b4q0<\{RD/" as bytes <<<>>>,
   prettyPrint: false,
-  username: "Gerda89",
-}, operationSecurity).then((res: UpdateUserRawResponse) => {
+  username: "Eleonore2",
+}).then((res: UpdateUserRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -125,11 +127,10 @@ sdk.user.updateUserRaw({
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.UpdateUserRawRequest](../../models/operations/updateuserrawrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.UpdateUserRawSecurity](../../models/operations/updateuserrawsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.UpdateUserRawRequest](../../models/operations/updateuserrawrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response

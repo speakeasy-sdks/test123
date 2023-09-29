@@ -51,9 +51,7 @@ export class User {
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "application/json";
 
-        headers[
-            "user-agent"
-        ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
+        headers["user-agent"] = this.sdkConfiguration.userAgent;
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
@@ -112,7 +110,6 @@ export class User {
      */
     async updateUserJson(
         req: operations.UpdateUserJsonRequest,
-        security: operations.UpdateUserJsonSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.UpdateUserJsonResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -135,10 +132,14 @@ export class User {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.UpdateUserJsonSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,
@@ -148,9 +149,7 @@ export class User {
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
-        headers[
-            "user-agent"
-        ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
+        headers["user-agent"] = this.sdkConfiguration.userAgent;
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
@@ -199,7 +198,6 @@ export class User {
      */
     async updateUserRaw(
         req: operations.UpdateUserRawRequest,
-        security: operations.UpdateUserRawSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.UpdateUserRawResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -222,10 +220,14 @@ export class User {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.UpdateUserRawSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,
@@ -235,9 +237,7 @@ export class User {
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
-        headers[
-            "user-agent"
-        ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
+        headers["user-agent"] = this.sdkConfiguration.userAgent;
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
