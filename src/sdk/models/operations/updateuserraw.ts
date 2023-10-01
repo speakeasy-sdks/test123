@@ -5,6 +5,11 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
+export class UpdateUserRawSecurity extends SpeakeasyBase {
+    @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2;name=Authorization" })
+    mainAuth: string;
+}
+
 export class UpdateUserRawRequest extends SpeakeasyBase {
     /**
      * Updated user object
