@@ -21,22 +21,22 @@ You can use `markdown` here.
 
 ```typescript
 import { FirstOne } from "firstOne";
-import { GetUserByNameResponse, GetUserByNameSecurity } from "firstOne/dist/sdk/models/operations";
+import { GetUserByNameSecurity } from "firstOne/dist/sdk/models/operations";
 
-const sdk = new FirstOne();
+(async() => {
+  const sdk = new FirstOne();
 const operationSecurity: GetUserByNameSecurity = {
   apiKey: "",
 };
 
-sdk.user.getUserByName({
-  prettyPrint: false,
-  username: "Zachery_Schneider",
-  withEmail: false,
-}, operationSecurity).then((res: GetUserByNameResponse) => {
+  const res = await sdk.user.getUserByName({
+    username: "Zachery_Schneider",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -61,27 +61,28 @@ This can only be done by the logged in user.
 
 ```typescript
 import { FirstOne } from "firstOne";
-import { UpdateUserJsonResponse, UpdateUserJsonSecurity } from "firstOne/dist/sdk/models/operations";
+import { UpdateUserJsonSecurity } from "firstOne/dist/sdk/models/operations";
 
-const sdk = new FirstOne();
+(async() => {
+  const sdk = new FirstOne();
 const operationSecurity: UpdateUserJsonSecurity = {
   mainAuth: "",
 };
 
-sdk.user.updateUserJson({
-  user: {
-    email: "john.smith@example.com",
-    firstName: "John",
-    lastName: "Smith",
-    username: "John78",
-  },
-  prettyPrint: false,
-  username: "Alanna_Waters81",
-}, operationSecurity).then((res: UpdateUserJsonResponse) => {
+  const res = await sdk.user.updateUserJson({
+    user: {
+      email: "john.smith@example.com",
+      firstName: "John",
+      lastName: "Smith",
+      username: "John78",
+    },
+    username: "Alanna_Waters81",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -106,22 +107,23 @@ This can only be done by the logged in user.
 
 ```typescript
 import { FirstOne } from "firstOne";
-import { UpdateUserRawResponse, UpdateUserRawSecurity } from "firstOne/dist/sdk/models/operations";
+import { UpdateUserRawSecurity } from "firstOne/dist/sdk/models/operations";
 
-const sdk = new FirstOne();
+(async() => {
+  const sdk = new FirstOne();
 const operationSecurity: UpdateUserRawSecurity = {
   mainAuth: "",
 };
 
-sdk.user.updateUserRaw({
-  requestBody: "b4q0<\{RD/" as bytes <<<>>>,
-  prettyPrint: false,
-  username: "Eleonore2",
-}, operationSecurity).then((res: UpdateUserRawResponse) => {
+  const res = await sdk.user.updateUserRaw({
+    requestBody: "b4q0<\{RD/" as bytes <<<>>>,
+    username: "Eleonore2",
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

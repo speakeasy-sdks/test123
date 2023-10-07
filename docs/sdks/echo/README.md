@@ -17,18 +17,20 @@ Receive the exact message you've sent
 
 ```typescript
 import { FirstOne } from "firstOne";
-import { EchoResponse, EchoSecurity } from "firstOne/dist/sdk/models/operations";
+import { EchoSecurity } from "firstOne/dist/sdk/models/operations";
 
-const sdk = new FirstOne();
+(async() => {
+  const sdk = new FirstOne();
 const operationSecurity: EchoSecurity = {
   apiKey: "",
 };
 
-sdk.echo.echo("Hello world!", operationSecurity).then((res: EchoResponse) => {
+  const res = await sdk.echo.echo("Hello world!", operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

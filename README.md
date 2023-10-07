@@ -20,18 +20,20 @@ yarn add https://github.com/speakeasy-sdks/test123
 <!-- Start SDK Example Usage -->
 ```typescript
 import { FirstOne } from "firstOne";
-import { EchoResponse, EchoSecurity } from "firstOne/dist/sdk/models/operations";
+import { EchoSecurity } from "firstOne/dist/sdk/models/operations";
 
-const sdk = new FirstOne();
+(async() => {
+  const sdk = new FirstOne();
 const operationSecurity: EchoSecurity = {
   apiKey: "",
 };
 
-sdk.echo.echo("Hello world!", operationSecurity).then((res: EchoResponse) => {
+  const res = await sdk.echo.echo("Hello world!", operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 <!-- End SDK Example Usage -->
 
