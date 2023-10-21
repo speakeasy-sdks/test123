@@ -2,27 +2,30 @@ configVersion: 1.0.0
 management:
   docChecksum: eb64a6a76bfb3db4a55f8a3a2cb59da3
   docVersion: 1.0.0
-  speakeasyVersion: 1.96.1
-  generationVersion: 2.150.0
+  speakeasyVersion: 1.104.0
+  generationVersion: 2.169.0
 generation:
   comments:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
+  repoURL: https://github.com/speakeasy-sdks/test123.git
   sdkClassName: firstOne
   singleTagPerOp: false
   tagNamespacingDisabled: false
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 2.90.4
+    core: 2.93.0
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
     methodSecurity: 2.82.0
 typescript:
-  version: 1.11.0
+  version: 1.12.0
   author: foo
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: false
+  installationURL: https://github.com/speakeasy-sdks/test123
   maxMethodParams: 0
   packageName: firstOne
+  repoSubDirectory: .
