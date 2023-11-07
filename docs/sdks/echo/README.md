@@ -1,5 +1,5 @@
 # Echo
-(*echo*)
+(*.echo*)
 
 ## Overview
 
@@ -26,6 +26,7 @@ const operationSecurity: EchoSecurity = {
 };
 
   const res = await sdk.echo.echo("Hello world!", operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

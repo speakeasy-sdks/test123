@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class EchoSecurity extends SpeakeasyBase {
@@ -15,6 +15,24 @@ export class EchoSecurity extends SpeakeasyBase {
 }
 
 export class EchoResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    twoHundredApplicationJsonRes?: string;
+
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    twoHundredApplicationXmlRes?: string;
+
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    twoHundredTextCsvRes?: string;
+
     /**
      * HTTP response content type for this operation
      */
@@ -35,22 +53,4 @@ export class EchoResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata()
-    echo200ApplicationJSONString?: string;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata()
-    echo200ApplicationXMLString?: string;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata()
-    echo200TextCsvString?: string;
 }

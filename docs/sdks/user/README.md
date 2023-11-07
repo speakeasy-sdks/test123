@@ -1,5 +1,5 @@
 # User
-(*user*)
+(*.user*)
 
 ## Overview
 
@@ -32,6 +32,7 @@ const operationSecurity: GetUserByNameSecurity = {
   const res = await sdk.user.getUserByName({
     username: "Zachery_Schneider",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -79,6 +80,7 @@ const operationSecurity: UpdateUserJsonSecurity = {
     username: "Alanna_Waters81",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -116,9 +118,10 @@ const operationSecurity: UpdateUserRawSecurity = {
 };
 
   const res = await sdk.user.updateUserRaw({
-    requestBody: "b4q0<\{RD/" as bytes <<<>>>,
+    requestBody: new TextEncoder().encode("0xf4D36eFb83"),
     username: "Eleonore2",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

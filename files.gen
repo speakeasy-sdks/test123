@@ -24,11 +24,11 @@ src/sdk/models/operations/echo.ts
 src/sdk/models/operations/getuserbyname.ts
 src/sdk/models/operations/updateuserjson.ts
 src/sdk/models/operations/updateuserraw.ts
-src/sdk/models/operations/index.ts
 src/sdk/models/shared/security.ts
 src/sdk/models/shared/user.ts
-src/sdk/models/shared/index.ts
 src/sdk/models/errors/index.ts
+src/sdk/models/operations/index.ts
+src/sdk/models/shared/index.ts
 USAGE.md
 docs/models/operations/echosecurity.md
 docs/models/operations/echoresponse.md
