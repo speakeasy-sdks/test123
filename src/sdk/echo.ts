@@ -40,7 +40,7 @@ export class Echo {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/echo";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/echo";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -72,7 +72,7 @@ export class Echo {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

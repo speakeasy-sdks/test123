@@ -41,7 +41,7 @@ export class User {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/users/{username}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/users/{username}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetUserByNameSecurity(security);
@@ -55,7 +55,7 @@ export class User {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -121,7 +121,7 @@ export class User {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/users/{username}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/users/{username}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -150,7 +150,7 @@ export class User {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -206,7 +206,7 @@ export class User {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/users/{username}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/users/{username}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -235,7 +235,7 @@ export class User {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

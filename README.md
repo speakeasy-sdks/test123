@@ -42,11 +42,11 @@ import { EchoSecurity } from "firstOne/dist/sdk/models/operations";
 ## Available Resources and Operations
 
 
-### [.echo](docs/sdks/echo/README.md)
+### [echo](docs/sdks/echo/README.md)
 
 * [echo](docs/sdks/echo/README.md#echo) - Echo test
 
-### [.user](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [getUserByName](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 * [updateUserJson](docs/sdks/user/README.md#updateuserjson) - Updated user
@@ -76,9 +76,36 @@ Here's an example of one such pagination call:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 
+## Example
+
+```typescript
+import { FirstOne } from "firstOne";
+import { EchoSecurity } from "firstOne/dist/sdk/models/operations";
+
+(async () => {
+    const sdk = new FirstOne();
+    const operationSecurity: EchoSecurity = {
+        apiKey: "",
+    };
+
+    let res;
+    try {
+        res = await sdk.echo.echo("Hello world!", operationSecurity);
+    } catch (e) {}
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
 <!-- End Error Handling -->
 
 
@@ -166,19 +193,16 @@ const httpClient = axios.create({
 
 const sdk = new FirstOne({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security scheme globally:
+This SDK supports the following security scheme globally:
 
 | Name     | Type     | Scheme   |
 | -------- | -------- | -------- |
@@ -207,7 +231,7 @@ import { EchoSecurity } from "firstOne/dist/sdk/models/operations";
 
 ## Per-Operation Security Schemes
 
-Some operations in your SDK require the security scheme to be specified at the request level. For example:
+Some operations in this SDK require the security scheme to be specified at the request level. For example:
 
 ```typescript
 import { FirstOne } from "firstOne";
