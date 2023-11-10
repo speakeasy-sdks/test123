@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { FirstOne } from "firstOne";
 import { EchoSecurity } from "firstOne/dist/sdk/models/operations";
