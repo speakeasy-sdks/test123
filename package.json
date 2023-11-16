@@ -1,6 +1,6 @@
 {
   "name": "firstOne",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "foo",
   "scripts": {
     "prepare": "tsc --build",

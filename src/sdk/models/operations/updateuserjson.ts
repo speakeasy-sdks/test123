@@ -6,6 +6,11 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
+export class UpdateUserJsonSecurity extends SpeakeasyBase {
+    @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2;name=Authorization" })
+    mainAuth: string;
+}
+
 export class UpdateUserJsonRequest extends SpeakeasyBase {
     /**
      * Updated user object
@@ -43,5 +48,5 @@ export class UpdateUserJsonResponse extends SpeakeasyBase {
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 }
