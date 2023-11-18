@@ -202,9 +202,9 @@ const sdk = new FirstOne({defaultClient: httpClient});
 
 This SDK supports the following security scheme globally:
 
-| Name     | Type     | Scheme   |
-| -------- | -------- | -------- |
-| `apiKey` | apiKey   | API key  |
+| Name         | Type         | Scheme       |
+| ------------ | ------------ | ------------ |
+| `mainAuth`   | oauth2       | OAuth2 token |
 
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
 ```typescript
