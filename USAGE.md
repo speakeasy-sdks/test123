@@ -1,12 +1,12 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { FirstOne } from "firstOne";
 import { EchoSecurity } from "firstOne/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new FirstOne();
     const operationSecurity: EchoSecurity = {
-        apiKey: "",
+        apiKey: "<YOUR_API_KEY_HERE>",
     };
 
     const res = await sdk.echo.echo("Hello world!", operationSecurity);
@@ -14,7 +14,9 @@ import { EchoSecurity } from "firstOne/dist/sdk/models/operations";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

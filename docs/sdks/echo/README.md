@@ -19,10 +19,10 @@ Receive the exact message you've sent
 import { FirstOne } from "firstOne";
 import { EchoSecurity } from "firstOne/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new FirstOne();
 const operationSecurity: EchoSecurity = {
-  apiKey: "",
+  apiKey: "<YOUR_API_KEY_HERE>",
 };
 
   const res = await sdk.echo.echo("Hello world!", operationSecurity);
@@ -30,7 +30,9 @@ const operationSecurity: EchoSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

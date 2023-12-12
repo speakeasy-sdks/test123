@@ -1,8 +1,8 @@
-# Security
+# UpdateUserJsonSecurity
 
 
 ## Fields
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `apiKey`           | *string*           | :heavy_minus_sign: | N/A                |
+| `mainAuth`         | *string*           | :heavy_check_mark: | N/A                |
