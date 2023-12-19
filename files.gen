@@ -35,10 +35,8 @@ docs/sdk/models/operations/echoresponse.md
 docs/sdk/models/operations/getuserbynamesecurity.md
 docs/sdk/models/operations/getuserbynamerequest.md
 docs/sdk/models/operations/getuserbynameresponse.md
-docs/sdk/models/operations/updateuserjsonsecurity.md
 docs/sdk/models/operations/updateuserjsonrequest.md
 docs/sdk/models/operations/updateuserjsonresponse.md
-docs/sdk/models/operations/updateuserrawsecurity.md
 docs/sdk/models/operations/updateuserrawrequest.md
 docs/sdk/models/operations/updateuserrawresponse.md
 docs/sdk/models/shared/schemebasicauth.md
