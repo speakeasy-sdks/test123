@@ -4,16 +4,16 @@ management:
   docChecksum: eb64a6a76bfb3db4a55f8a3a2cb59da3
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 2.1.2
-  configChecksum: 45a7655a6b8b68b78818e9ccf9ce86c5
+  generationVersion: 2.231.0
+  releaseVersion: 2.1.3
+  configChecksum: a62e3e59373aca70538a89bdecd79bbb
   repoURL: https://github.com/speakeasy-sdks/test123.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test123
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 3.4.1
+    core: 3.4.5
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.0
@@ -55,10 +55,8 @@ generatedFiles:
   - docs/sdk/models/operations/getuserbynamesecurity.md
   - docs/sdk/models/operations/getuserbynamerequest.md
   - docs/sdk/models/operations/getuserbynameresponse.md
-  - docs/sdk/models/operations/updateuserjsonsecurity.md
   - docs/sdk/models/operations/updateuserjsonrequest.md
   - docs/sdk/models/operations/updateuserjsonresponse.md
-  - docs/sdk/models/operations/updateuserrawsecurity.md
   - docs/sdk/models/operations/updateuserrawrequest.md
   - docs/sdk/models/operations/updateuserrawresponse.md
   - docs/sdk/models/shared/schemebasicauth.md
