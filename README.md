@@ -201,39 +201,12 @@ const sdk = new FirstOne({defaultClient: httpClient});
 
 This SDK supports the following security scheme globally:
 
-| Name         | Type         | Scheme       |
-| ------------ | ------------ | ------------ |
-| `mainAuth`   | oauth2       | OAuth2 token |
+| Name     | Type     | Scheme   |
+| -------- | -------- | -------- |
+| `apiKey` | apiKey   | API key  |
 
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
-```typescript
-import { FirstOne } from "firstOne";
 
-async function run() {
-    const sdk = new FirstOne({
-        security: {
-            mainAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
-        },
-    });
-
-    const res = await sdk.user.updateUserJson({
-        user: {
-            email: "john.smith@example.com",
-            firstName: "John",
-            lastName: "Smith",
-            username: "John78",
-        },
-        username: "Alanna_Waters81",
-    });
-
-    if (res.statusCode == 200) {
-        // handle response
-    }
-}
-
-run();
-
-```
 
 ### Per-Operation Security Schemes
 
