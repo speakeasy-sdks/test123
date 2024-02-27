@@ -4,9 +4,9 @@ management:
   docChecksum: eb64a6a76bfb3db4a55f8a3a2cb59da3
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 4.0.2
-  configChecksum: 85156db9a0aa0f865bbf65682e30cb62
+  generationVersion: 2.272.7
+  releaseVersion: 4.0.3
+  configChecksum: 4091d111262c10995f12e9b242c4531b
   repoURL: https://github.com/speakeasy-sdks/test123.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test123
@@ -14,7 +14,7 @@ features:
   typescript:
     acceptHeaders: 2.81.1
     core: 3.4.8
-    globalSecurity: 2.82.3
+    globalSecurity: 2.82.4
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.0
 generatedFiles:
