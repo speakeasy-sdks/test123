@@ -96,7 +96,7 @@ export class Echo {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
-                    res.twoHundredApplicationJsonRes = decodedRes;
+                    res.twoHundredApplicationJsonString = JSON.parse(decodedRes);
                 } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.twoHundredApplicationXmlRes = decodedRes;
                 } else if (utils.matchContentType(responseContentType, `text/csv`)) {

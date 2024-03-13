@@ -19,7 +19,7 @@ export class EchoResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    twoHundredApplicationJsonRes?: string;
+    twoHundredApplicationJsonString?: string;
 
     /**
      * OK

@@ -5,7 +5,7 @@
 
 | Field                                                   | Type                                                    | Required                                                | Description                                             |
 | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| `twoHundredApplicationJsonRes`                          | *string*                                                | :heavy_minus_sign:                                      | OK                                                      |
+| `twoHundredApplicationJsonString`                       | *string*                                                | :heavy_minus_sign:                                      | OK                                                      |
 | `twoHundredApplicationXmlRes`                           | *string*                                                | :heavy_minus_sign:                                      | OK                                                      |
 | `twoHundredTextCsvRes`                                  | *string*                                                | :heavy_minus_sign:                                      | OK                                                      |
 | `contentType`                                           | *string*                                                | :heavy_check_mark:                                      | HTTP response content type for this operation           |
